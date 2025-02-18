@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function estPalindromeRecursive(chaine) {
+  chaine = chaine.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+  if (chaine.length <= 1) {
+    return true;
+  } else if (chaine[0] !== chaine[chaine.length - 1]) {
+    return false;
+  } else {
+    return estPalindromeRecursive(chaine.substring(1, chaine.length - 1));
+  }
+}
+
+const chaine = prompt("Entrez une chaîne : ");
+if (estPalindromeRecursive(chaine)) {
+  console.log(`'${chaine}' est un palindrome.`);
+} else {
+  console.log(`'${chaine}' n'est pas un palindrome.`);
+}
+    </script>
+</body>
+</html>

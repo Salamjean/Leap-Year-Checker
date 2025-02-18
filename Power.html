@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function puissanceRecursive(nombre, exposant) {
+  if (exposant === 0) {
+    return 1;
+  } else if (exposant > 0) {
+    return nombre * puissanceRecursive(nombre, exposant - 1);
+  } else {
+    return 1 / puissanceRecursive(nombre, -exposant);
+  }
+}
+
+const nombre = parseFloat(prompt("Entrez un nombre :"));
+const exposant = parseInt(prompt("Entrez un exposant :"));
+
+const resultat = puissanceRecursive(nombre, exposant);
+console.log(`${nombre} élevé à la puissance ${exposant} est égal à ${resultat}`);
+    </script>
+</body>
+</html>

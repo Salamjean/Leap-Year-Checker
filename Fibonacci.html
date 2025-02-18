@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fibonacciRecursive(n) {
+  if (n <= 1) {
+    return n;
+  } else {
+    return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
+  }
+}
+
+const n = parseInt(prompt("Entrez un entier positif pour trouver son nombre de fibonacci : "));
+const resultat = fibonacciRecursive(n);
+console.log(`Le ${n}ème nombre de Fibonacci est : ${resultat}`);
+    </script>
+</body>
+</html>

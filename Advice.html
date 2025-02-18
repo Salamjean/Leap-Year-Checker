@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function conseilVetementsPluie(temperature, pleut) {
+  let conseil = "";
+  if (pleut) {
+    conseil += "N'oubliez pas votre parapluie ou votre imperméable ! ";
+  }
+  if (temperature < 10) {
+    conseil += "Il fait froid, portez un manteau chaud.";
+  } else if (temperature < 20) {
+    conseil += "Portez une veste ou un pull.";
+  } else {
+    conseil += "Il fait doux, vous pouvez porter des vêtements légers.";
+  }
+  return conseil;
+}
+
+const temperature = parseInt(prompt("Quelle est la température actuelle en degrés Celsius ?"));
+const reponse = prompt("Est-ce qu'il pleut ? (oui/non)");
+const pleut = reponse.toLowerCase() === "oui";
+
+const conseil = conseilVetementsPluie(temperature, pleut);
+console.log(conseil);
+    </script>
+</body>
+</html>

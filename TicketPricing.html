@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calculerPrixBillet(age) {
+          if (age <= 12) {
+            return 10;
+          } else if (age >= 13 && age <= 17) {
+            return 15;
+          } else {
+            return 20;
+          }
+        }       
+
+        const age = parseInt(prompt("Entrez votre âge :"));
+        const prix = calculerPrixBillet(age);
+        console.log(`Le prix de votre billet est de $${prix}.`);
+    </script>
+</body>
+</html>
