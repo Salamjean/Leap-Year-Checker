@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function estAnneeBissextile(annee) {
+              if ((annee % 4 === 0 && annee % 100 !== 0) || (annee % 400 === 0)) {
+                return true;
+              } else {
+                return false;
+              }
+            }
+            const annee = parseInt(prompt("Entrez une année :"));
+            if (estAnneeBissextile(annee)) {
+              console.log(`${annee} est une année bissextile.`);
+            } else {
+              console.log(`${annee} n'est pas une année bissextile.`);
+            }
+    </script>
+</body>
+</html>
